@@ -90,6 +90,9 @@ max_stacks_per_tenant = {{ server.max_stacks_per_tenant }}
 
 # Timeout in seconds for stack action (ie. create or update). (integer value)
 #stack_action_timeout = 3600
+{%- if server.get('stack_action_timeout',) %}
+stack_action_timeout = {{ server.get('stack_action_timeout', 3600) }}
+{%- endif %}
 
 # The amount of time in seconds after an error has occurred that tasks may
 # continue to run before being cancelled. (integer value)

@@ -61,6 +61,12 @@ max_stacks_per_tenant = {{ server.max_stacks_per_tenant }}
 max_nested_stack_depth = {{ server.max_nested_stack_depth }}
 {%- endif %}
 
+# Timeout in seconds for stack action (ie. create or update). (integer value)
+#stack_action_timeout = 3600
+{%- if server.get('stack_action_timeout',) %}
+stack_action_timeout = {{ server.get('stack_action_timeout', 3600) }}
+{%- endif %}
+
 # Number of times to retry to bring a resource to a non-error
 # state. Set to 0 to disable retries. (integer value)
 #action_retry_limit=5

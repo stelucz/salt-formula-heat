@@ -8,6 +8,7 @@ heat:
       name: heat_domain_admin
       password: password
       domain: heat
+    stack_action_timeout: 7200
     bind:
       api_cfn:
         address: 0.0.0.0

@@ -68,6 +68,7 @@ Single Heat services on the controller node:
           ha_queues: True
         max_stacks_per_tenant: 150
         max_nested_stack_depth: 10
+        stack_action_timeout: 7200
 
 Define server clients Keystone parameter:
 
